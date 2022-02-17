@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 요소 - 레이아웃</title>
+
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0;}
+        body {
+            font-family: 'Hi Melody', cursive;
+        }
+
+        header {
+            background-color: lightgray;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        nav {
+            float: left;
+            width: 20%;
+            height: 300px;
+            background-color: #339999;
+            padding: 20px;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 80%;
+            background-color: #f1f1f1;
+            height: 300px;
+        }
+
+        section::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        footer {
+            background-color: #ffcc00;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        /* 반응형 적용 - 가로 사이즈 600px 이하 */
+        @media screen and (max-width: 600px) {
+        nav,
+        article { 
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+       
+</head>
+<body>
+    <h1>semantic 태그를 이용한 레이아웃</h1>
+    <header>
+        <h2>HEADER</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <!-- 한 줄 복사 : alt + shift + ↓ -->
+                <li><a href="#">menu 001</a></li>
+                <li><a href="#">menu 002</a></li>
+                <li><a href="#">menu 003</a></li>
+                <li><a href="#">menu 004</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>SBS 아카데미</h1>
+            <p>
+                밤을 이제 쓸쓸함과 된 이런 아직 봅니다. 마리아 무덤 속의 아침이 거외다. 하늘에는 그리고 없이 언덕 이런 별을 잠, 까닭입니다.
+            </p>
+            <p>
+                밤을 이제 쓸쓸함과 된 이런 아직 봅니다. 마리아 무덤 속의 아침이 거외다. 하늘에는 그리고 없이 언덕 이런 별을 잠, 까닭입니다.
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <h2>FOOTER</h2>
+    </footer>
+    
+</body>
+</html>
